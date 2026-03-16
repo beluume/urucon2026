@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conferencia</title>
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-logo">Conferencia</a>
+
+      <ul class="nav-menu">
+
+        <!-- INICIO -->
+        <li class="nav-item">
+          <a href="#inicio" class="nav-link">Inicio</a>
+        </li>
+
+        <!-- MEGA MENÚ: LA CONFERENCIA -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            La Conferencia
+            <svg class="chevron" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="mega-drop cols-3">
+            <div class="drop-col">
+              <div class="drop-col-title">Evento</div>
+              <a class="drop-link" href="#">Programa</a>
+              <a class="drop-link" href="#">Oradores</a>
+              <a class="drop-link" href="#">Sede</a>
+              <a class="drop-link" href="#">Cómo llegar</a>
+            </div>
+            <div class="drop-col">
+              <div class="drop-col-title">Participar</div>
+              <a class="drop-link" href="#">Inscripción</a>
+              <a class="drop-link" href="#">Talleres</a>
+              <a class="drop-link" href="#">Networking</a>
+              <a class="drop-link" href="#">Galas y cenas</a>
+            </div>
+            <div class="drop-col">
+              <div class="drop-col-title">Ediciones</div>
+              <a class="drop-link" href="#">Edición 2025</a>
+              <a class="drop-link" href="#">Galería</a>
+              <a class="drop-link" href="#">Videos</a>
+              <a class="drop-link" href="#">Memorias</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- MEGA MENÚ: CONTENIDO -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            Contenido
+            <svg class="chevron" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="mega-drop cols-2">
+            <div class="drop-col">
+              <div class="drop-col-title">Recursos</div>
+              <a class="drop-link" href="#">Noticias</a>
+              <a class="drop-link" href="#">Publicaciones</a>
+              <a class="drop-link" href="#">Podcast</a>
+              <a class="drop-link" href="#">Investigaciones</a>
+            </div>
+            <div class="drop-col">
+              <div class="drop-col-title">Comunidad</div>
+              <a class="drop-link" href="#">Miembros</a>
+              <a class="drop-link" href="#">Foros</a>
+              <a class="drop-link" href="#">Newsletter</a>
+              <a class="drop-link" href="#">Premios</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- DROPDOWN SIMPLE: NOSOTROS -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            Nosotros
+            <svg class="chevron" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="simple-drop">
+            <a class="drop-link" href="#about">Quiénes somos</a>
+            <a class="drop-link" href="#">Misión y visión</a>
+            <a class="drop-link" href="#">Equipo organizador</a>
+            <a class="drop-link" href="#">Contacto</a>
+          </div>
+        </li>
+
+        <!-- ENLACE DIRECTO: SPONSORS -->
+        <li class="nav-item">
+          <a class="nav-link" href="#sponsors">Sponsors</a>
+        </li>
+
+      </ul>
+
+      <button class="nav-cta">Inscribirse</button>
+
+      <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE DRAWER ── -->
+  <div class="mobile-drawer" id="mobileDrawer">
+
+    <div class="mobile-section">
+      <div class="mobile-section-title">Inicio</div>
+      <a class="mobile-link" href="#inicio" onclick="closeMobile()">Inicio</a>
+    </div>
+
+    <div class="mobile-section">
+      <div class="mobile-section-title">La Conferencia — Evento</div>
+      <a class="mobile-link" href="#" onclick="closeMobile()">Programa</a>
+      <a class="mobile-link" href="#" onclick="closeMobile()">Oradores</a>
+      <a class="mobile-link" href="#" onclick="closeMobile()">Sede</a>
+      <a class="mobile-link" href="#" onclick="closeMobile()">Cómo llegar</a>
+    </div>
+
+    <div class="mobile-section">
+      <div class="mobile-section-title">La Conferencia — Participar</div>
+      <a class="mobile-link" href="#" onclick="closeMobile()">Inscripción</a>
+      <a class="mobile-link" href="#" onclick="closeMobile()">Talleres</a>
+      <a class="mobile-link" href="#" onclick="closeMobile()">Networking</a>
+      <a class="mobile-link" href="#" onclick="closeMobile()">Galas y cenas</a>
+    </div>
+
+    <div class="mobile-section">
+      <div class="mobile-section-title">Contenido</div>
+      <a class="mobile-link" href="#" onclick="closeMobile()">Noticias</a>
+      <a class="mobile-link" href="#" onclick="closeMobile()">Publicaciones</a>
+      <a class="mobile-link" href="#" onclick="closeMobile()">Podcast</a>
+      <a class="mobile-link" href="#" onclick="closeMobile()">Miembros</a>
+      <a class="mobile-link" href="#" onclick="closeMobile()">Premios</a>
+    </div>
+
+    <div class="mobile-section">
+      <div class="mobile-section-title">Nosotros</div>
+      <a class="mobile-link" href="#about" onclick="closeMobile()">Quiénes somos</a>
+      <a class="mobile-link" href="#" onclick="closeMobile()">Equipo organizador</a>
+      <a class="mobile-link" href="#" onclick="closeMobile()">Contacto</a>
+    </div>
+
+    <div class="mobile-section">
+      <div class="mobile-section-title">Sponsors</div>
+      <a class="mobile-link" href="#sponsors" onclick="closeMobile()">Ver sponsors</a>
+    </div>
+
+    <a class="mobile-cta" href="#">Inscribirse al evento</a>
+
+  </div>
+
+  <!-- ── BANNER ── -->
+  <section id="inicio">
+    <div class="banner-bg"></div>
+    <div class="banner-overlay"></div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-visual reveal">
+        <div class="about-img-box">
+          <div class="about-img-placeholder">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="60" height="60" rx="4" stroke="#1a3c6e" stroke-width="1.5"/>
+              <circle cx="40" cy="35" r="12" stroke="#1a3c6e" stroke-width="1.5"/>
+              <path d="M16 70 Q40 48 64 70" stroke="#1a3c6e" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+        </div>
+        <div class="about-badge">
+          <span class="num">10+</span>
+          <span class="label">Años de<br>experiencia</span>
+        </div>
+      </div>
+
+      <div class="about-text reveal">
+        <span class="section-tag">Sobre nosotros</span>
+        <h2 class="section-title">Quiénes somos<br>y <em>qué hacemos</em></h2>
+        <p>
+          Somos un equipo apasionado que trabaja todos los días para crear soluciones de valor. Acá podés describir tu empresa, tu misión y lo que te hace diferente.
+        </p>
+        <p>
+          Este párrafo es el lugar ideal para hablar de tu historia, tu visión a largo plazo, o el problema que tu organización busca resolver en el mundo.
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <div class="stat-num">250+</div>
+            <div class="stat-label">Proyectos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">48</div>
+            <div class="stat-label">Clientes</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">12</div>
+            <div class="stat-label">Países</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SPONSORS ── -->
+  <section id="sponsors">
+    <div class="sponsors-inner">
+      <div class="sponsors-header reveal">
+        <span class="section-tag">Partners & Sponsors</span>
+        <h2 class="section-title" style="margin-bottom:0">Quienes <em>confían</em> en nosotros</h2>
+        <p class="sponsors-subtitle">Organizaciones que hacen posible nuestra misión.</p>
+      </div>
+
+      <div class="sponsors-tiers">
+        <div class="tier-gold reveal">
+          <div class="sponsor-tier-label">Oro</div>
+          <div class="sponsors-row">
+            <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
+            <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
+            <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
+          </div>
+        </div>
+
+        <div class="tier-silver reveal">
+          <div class="sponsor-tier-label">Plata</div>
+          <div class="sponsors-row">
+            <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
+            <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
+            <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
+            <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
+          </div>
+        </div>
+
+        <div class="tier-bronze reveal">
+          <div class="sponsor-tier-label">Bronce</div>
+          <div class="sponsors-row">
+            <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
+            <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
+            <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
+            <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
+            <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer id="contacto">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#inicio" class="nav-logo">Conferencia</a>
+          <p>Una descripción breve de tu organización. Reemplazá este texto con tu tagline o misión.</p>
+          <div class="footer-socials">
+            <a class="social-btn" href="#" title="Instagram">In</a>
+            <a class="social-btn" href="#" title="Twitter">Tw</a>
+            <a class="social-btn" href="#" title="LinkedIn">Li</a>
+            <a class="social-btn" href="#" title="YouTube">Yt</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#about">Nosotros</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Accesibilidad</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="tu@email.com" />
+            <button>Suscribirse</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Conferencia. Todos los derechos reservados.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Mapa del sitio</a>
+          <a href="#">Ayuda</a>
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
