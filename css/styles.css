@@ -325,19 +325,33 @@ nav.scrolled .nav-item > .nav-link { height: 56px; }
 #inicio {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: 8rem 4rem 4rem;
+  padding: 6rem 6rem 4rem;
 }
 
 .banner-bg {
-  position: absolute; inset: 0;
+  position: absolute;
+  inset: 0;
   background-image: url('../img/banner.jpg');
   background-size: contain;
-  background-position: center;
+  background-position: center 30%;
   background-repeat: no-repeat;
+  margin: 0 6rem;
+}
+
+.banner-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.85),
+    rgba(255,255,255,0.65),
+    rgba(255,255,255,0.85)
+  );
+  pointer-events:none;
 }
 
 .banner-content {
@@ -387,18 +401,23 @@ nav.scrolled .nav-item > .nav-link { height: 56px; }
 }
 
 .banner-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  animation: fadeUp 1s 0.4s ease both;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
+.banner-bottom{
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .btn-primary {
   background: var(--accent);
   color: #ffffff;
   border: none;
-  padding: 0.9rem 2.2rem;
+  padding: 1rem 2.4rem;
   border-radius: 2px;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.9rem;
@@ -813,7 +832,10 @@ footer {
 }
 
 @media (max-width: 900px) {
-  #inicio { padding: 7rem 1.5rem 4rem; }
+  #inicio { min-height: 70vh; padding: 7rem 0rem 4rem; }
+   .banner-bg{
+    margin: 0;
+  }
   #about { padding: 5rem 1.5rem; }
   .about-inner { grid-template-columns: 1fr; gap: 3rem; }
   .about-badge { bottom: -1rem; right: -0.5rem; }
