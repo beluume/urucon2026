@@ -3,7 +3,7 @@
 ## Repository
 
 **Name:** urucon2026
-**Link:** 
+**Link:** https://github.com/beluume/urucon2026.git
 
 ---
 
@@ -20,7 +20,7 @@ The project is built using **HTML, CSS, and JavaScript** focused on a responsive
 1. Clone the repository:
 
 ```
-git clone 
+git clone https://github.com/beluume/urucon2026.git
 ```
 
 2. Open `index.html` in your browser.
