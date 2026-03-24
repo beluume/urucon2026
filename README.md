@@ -3,6 +3,7 @@
 ## Repository
 
 **Name:** urucon2026
+
 **Link:** https://github.com/beluume/urucon2026.git
 
 ---
