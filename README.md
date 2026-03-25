@@ -25,3 +25,10 @@ git clone https://github.com/beluume/urucon2026.git
 ```
 
 2. Open `index.html` in your browser.
+
+---
+
+## Notes:
+
+- The contact functionality using mailto is not yet fully implemented.
+- The necessary files/configurations still need to be created for it to work properly.
