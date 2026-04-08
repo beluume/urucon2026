@@ -1,0 +1,621 @@
+/* ══════════════════════════════════════════
+   URUCON 2026 — registration.css
+   Estilos exclusivos de la página Registration.
+   Requiere css/styles.css cargado antes.
+   ══════════════════════════════════════════ */
+
+
+/* ── HERO ──────────────────────────────────── */
+
+.reg-hero {
+  min-height: 38vh;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 8rem 4rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.reg-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(255,255,255,0.06) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.reg-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.reg-hero-inner {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.reg-hero-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.reg-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+}
+
+.reg-hero-title em {
+  font-style: italic;
+  color: rgba(255,255,255,0.65);
+}
+
+.reg-hero-sub {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.97rem;
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+
+/* ── PAGE WRAPPER ───────────────────────────── */
+
+.reg-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 4rem 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.reg-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+/* ── SECTION HEADERS ────────────────────────── */
+
+.reg-sh { margin-bottom: .5rem; }
+
+.reg-sh-tag {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.reg-sh-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.reg-sh-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.reg-sh-desc {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.75;
+  max-width: 660px;
+}
+
+.reg-sh-desc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.reg-sh-desc a:hover { text-decoration: underline; }
+
+
+/* ── PRICING GRID ───────────────────────────── */
+
+.reg-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.reg-pricing-grid--narrow {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 560px;
+}
+
+
+/* ── PRICING CARD ───────────────────────────── */
+
+.reg-pc {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.reg-pc:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent2);
+}
+
+.reg-pc-featured {
+  border: 2px solid var(--accent);
+}
+
+.reg-pc-badge {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.25rem 0.9rem;
+  border-radius: 0 0 6px 6px;
+  white-space: nowrap;
+}
+
+.reg-pc-header {
+  padding: 1.5rem 1.4rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.reg-pc-free .reg-pc-header {
+  background: #f1f8f1;
+}
+
+.reg-pc-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.reg-pc-category {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.reg-pc-body {
+  padding: 1.4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reg-pc-price-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.reg-pc-price {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.reg-pc-price-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.reg-pc-price-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.reg-pc-price-val.reg-late {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.reg-pc-price-val.reg-free {
+  color: #2e7d32;
+}
+
+.reg-pc-divider {
+  width: 1px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.reg-pc-cta {
+  display: block;
+  text-align: center;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: auto;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.reg-pc-cta:hover {
+  background: var(--accent2);
+  transform: translateY(-1px);
+}
+
+.reg-pc-cta-green {
+  background: #2e7d32;
+}
+
+.reg-pc-cta-green:hover {
+  background: #1b5e20;
+}
+
+
+/* ── EARLY BIRD STRIP ───────────────────────── */
+
+.reg-early-strip {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.4rem;
+  background: var(--accent-light);
+  border-radius: 8px;
+  border: 1px solid #c5d5ee;
+}
+
+.reg-early-strip svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--accent);
+  fill: none;
+  flex-shrink: 0;
+}
+
+.reg-early-strip-text {
+  font-size: 0.83rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.reg-early-strip-text strong {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+
+/* ── WARNING CARD ───────────────────────────── */
+
+.reg-warn-card {
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.reg-warn-card svg {
+  width: 20px;
+  height: 20px;
+  stroke: #f57f17;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.reg-warn-text {
+  font-size: 0.82rem;
+  color: #5d4037;
+  line-height: 1.65;
+}
+
+.reg-warn-text strong {
+  color: #e65100;
+  font-weight: 500;
+}
+
+
+/* ── RULES GRID ─────────────────────────────── */
+
+.reg-rules-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.reg-rule-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.3rem 1.4rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: border-color 0.2s;
+}
+
+.reg-rule-card:hover { border-color: var(--accent); }
+
+.reg-rule-num {
+  width: 32px;
+  height: 32px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.reg-rule-title {
+  font-size: 0.83rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.reg-rule-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.reg-rule-desc strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+
+/* ── SCHOLARSHIP CARD ───────────────────────── */
+
+.reg-scholarship-card {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+  border-radius: 10px;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.reg-scholarship-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.reg-sch-text { position: relative; z-index: 1; }
+
+.reg-sch-tag {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.reg-sch-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.6rem;
+}
+
+.reg-sch-desc {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+.reg-sch-cta {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  display: inline-block;
+  background: #fff;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.reg-sch-cta:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+
+/* ── INVOICE ────────────────────────────────── */
+
+.reg-invoice-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.reg-invoice-desc {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.85;
+}
+
+.reg-invoice-desc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.reg-invoice-desc a:hover { text-decoration: underline; }
+
+.reg-invoice-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.reg-invoice-header {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.85rem 1.2rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.reg-invoice-row {
+  padding: 0.85rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.reg-invoice-row:last-child { border-bottom: none; }
+
+.reg-invoice-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.reg-invoice-val {
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.reg-invoice-exempt {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.25rem 0.7rem;
+  border-radius: 100px;
+  margin-top: 0.2rem;
+}
+
+
+/* ── RESPONSIVE ─────────────────────────────── */
+
+@media (max-width: 900px) {
+  .reg-hero {
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  .reg-page {
+    padding: 3rem 1.5rem 5rem;
+    gap: 4rem;
+  }
+
+  .reg-pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reg-pricing-grid--narrow {
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+  }
+
+  .reg-rules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reg-invoice-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .reg-scholarship-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .reg-hero-title { font-size: 2rem; }
+  .reg-sh-title { font-size: 1.3rem; }
+
+  .reg-pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reg-pricing-grid--narrow {
+    grid-template-columns: 1fr;
+  }
+}

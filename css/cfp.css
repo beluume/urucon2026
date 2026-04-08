@@ -1,0 +1,510 @@
+.cfp-hero {
+  min-height: 38vh;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 8rem 4rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cfp-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(255,255,255,0.06) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.cfp-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.cfp-hero-inner {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cfp-hero-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.cfp-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+}
+
+.cfp-hero-title em {
+  font-style: italic;
+  color: rgba(255,255,255,0.65);
+}
+
+.cfp-hero-sub {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.97rem;
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+
+/* ── LAYOUT GENERAL ─────────────────────────── */
+
+.cfp-body {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 4rem 7rem;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.cfp-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+
+/* ── ENCABEZADOS DE SECCIÓN ─────────────────── */
+
+.cfp-section-tag {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
+.cfp-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+  color: var(--text);
+}
+
+.cfp-section-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+
+/* ── INTRO ──────────────────────────────────── */
+
+.cfp-intro p {
+  color: var(--muted);
+  line-height: 1.85;
+  font-size: 0.97rem;
+  margin-bottom: 1rem;
+}
+
+
+/* ── TOPICS ─────────────────────────────────── */
+
+.cfp-topics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.cfp-topic-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.cfp-topic-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.cfp-topic-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--accent-light);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cfp-topic-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--accent);
+}
+
+.cfp-topic-text {
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--text);
+  padding-top: 0.1rem;
+}
+
+
+/* ── STEPS ──────────────────────────────────── */
+
+.cfp-steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.cfp-step {
+  display: flex;
+  gap: 1.4rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.cfp-step:first-child { border-top: 1px solid var(--border); }
+
+.cfp-step-num {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.cfp-step-body { flex: 1; }
+
+.cfp-step-title {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.01em;
+}
+
+.cfp-step-desc {
+  font-size: 0.83rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.cfp-step-desc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.cfp-step-desc a:hover { text-decoration: underline; }
+
+
+/* ── REVIEW PROCESS ─────────────────────────── */
+
+.cfp-review-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.cfp-review-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.4rem 1.2rem;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.cfp-review-card:hover { border-color: var(--accent); }
+
+.cfp-review-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.9rem;
+}
+
+.cfp-review-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.rc-accept .cfp-review-icon { background: #e8f5e9; }
+.rc-accept .cfp-review-icon svg { stroke: #2e7d32; }
+
+.rc-revise .cfp-review-icon { background: #fff8e1; }
+.rc-revise .cfp-review-icon svg { stroke: #f57f17; }
+
+.rc-reject .cfp-review-icon { background: #fce4ec; }
+.rc-reject .cfp-review-icon svg { stroke: #c62828; }
+
+.cfp-review-label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.cfp-review-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.cfp-review-note {
+  margin-top: 1.2rem;
+  padding: 1rem 1.2rem;
+  background: var(--accent-light);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 4px 4px 0;
+  font-size: 0.83rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.cfp-review-note a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.cfp-review-note a:hover { text-decoration: underline; }
+
+
+/* ── SIDEBAR ────────────────────────────────── */
+
+.cfp-sidebar {
+  position: sticky;
+  top: 88px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Fechas */
+.cfp-dates-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cfp-dates-header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.cfp-dates-header svg {
+  width: 18px;
+  height: 18px;
+  stroke: rgba(255,255,255,0.8);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.cfp-dates-header span {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.cfp-dates-list { padding: 0.4rem 0; }
+
+.cfp-date-item {
+  padding: 0.95rem 1.4rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.cfp-date-item:last-child { border-bottom: none; }
+
+.cfp-date-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.cfp-date-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.cfp-date-note {
+  font-size: 0.73rem;
+  color: var(--muted);
+}
+
+/* Descarga */
+.cfp-download-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--bg);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.cfp-download-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.cfp-download-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--accent-light);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cfp-download-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cfp-download-title {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.cfp-download-sub {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* Contacto */
+.cfp-contact-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.4rem;
+}
+
+.cfp-contact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+}
+
+.cfp-contact-card p {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.cfp-btn-contact {
+  display: block;
+  text-align: center;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.65rem 1rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cfp-btn-contact:hover {
+  background: var(--accent2);
+  transform: translateY(-1px);
+}
+
+
+/* ── RESPONSIVE ─────────────────────────────── */
+
+@media (max-width: 900px) {
+  .cfp-hero {
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  .cfp-body {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem 5rem;
+    gap: 3rem;
+  }
+
+  .cfp-sidebar {
+    position: static;
+  }
+
+  .cfp-topics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cfp-review-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .cfp-hero-title { font-size: 2rem; }
+  .cfp-section-title { font-size: 1.25rem; }
+}
