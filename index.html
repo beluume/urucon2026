@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>URUCON 2026</title>
   <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
   <!-- Estilos -->
-  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
 
   <!-- ── NAV ── -->
@@ -29,11 +33,12 @@
           <a class="nav-link" href="#">
             Conference
             <svg class="chevron" viewBox="0 0 12 12" fill="none">
-              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </a>
           <div class="mega-drop cols-1"><!-- provisorio, suplantar por el de abajo -->
-          <!--<div class="mega-drop cols-3">
+            <!--<div class="mega-drop cols-3">
             <div class="drop-col">
               <div class="drop-col-title">Event</div>
               <a class="drop-link" href="#">Program</a>
@@ -43,10 +48,10 @@
             </div>-->
             <div class="drop-col">
               <div class="drop-col-title">Participation</div>
-              <a class="drop-link" href="#">Call For Papers</a>
-              <!--<a class="drop-link" href="#">Final Upload</a>
-              <a class="drop-link" href="#">Registration</a>
-              <a class="drop-link" href="#">Presenters</a>-->
+              <a class="drop-link" href="cfpapers.html">Call For Papers</a>
+              <!--<a class="drop-link" href="#">Final Upload</a>-->
+              <a class="drop-link" href="registration.html">Registration</a>
+              <!--<a class="drop-link" href="#">Presenters</a>-->
             </div>
             <!--<div class="drop-col">
               <div class="drop-col-title">Activities</div>
@@ -100,7 +105,7 @@
 
       </ul>
 
-      <button class="nav-cta">Register</button>
+      <button class="nav-cta" onclick="window.location.href='registration.html'">Register</button>
 
       <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menú">
         <span></span><span></span><span></span>
@@ -126,10 +131,10 @@
 
     <div class="mobile-section">
       <div class="mobile-section-title">Conference — Participation</div>
-      <a class="mobile-link" href="#" onclick="closeMobile()">Call For Papers</a>
-      <!--<a class="mobile-link" href="#" onclick="closeMobile()">Final Upload</a>
+      <a class="mobile-link" href="cfpapers.html" onclick="closeMobile()">Call For Papers</a>
+      <!--<a class="mobile-link" href="#" onclick="closeMobile()">Final Upload</a>-->
       <a class="mobile-link" href="#" onclick="closeMobile()">Registration</a>
-      <a class="mobile-link" href="#" onclick="closeMobile()">Presenters</a>-->
+      <!--<a class="mobile-link" href="#" onclick="closeMobile()">Presenters</a>-->
     </div>
 
     <!--<div class="mobile-section">
@@ -158,7 +163,7 @@
       <a class="mobile-link" href="#sponsors" onclick="closeMobile()">View sponsors</a>
     </div>
 
-    <a class="mobile-cta" href="#">Registration to the Event</a>
+    <a class="mobile-cta" href="registration.html">Registration to the Event</a>
 
   </div>
 
@@ -178,9 +183,9 @@
         <div class="about-img-box">
           <div class="about-img-placeholder">
             <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="10" y="10" width="60" height="60" rx="4" stroke="#1a3c6e" stroke-width="1.5"/>
-              <circle cx="40" cy="35" r="12" stroke="#1a3c6e" stroke-width="1.5"/>
-              <path d="M16 70 Q40 48 64 70" stroke="#1a3c6e" stroke-width="1.5" fill="none"/>
+              <rect x="10" y="10" width="60" height="60" rx="4" stroke="#1a3c6e" stroke-width="1.5" />
+              <circle cx="40" cy="35" r="12" stroke="#1a3c6e" stroke-width="1.5" />
+              <path d="M16 70 Q40 48 64 70" stroke="#1a3c6e" stroke-width="1.5" fill="none" />
             </svg>
           </div>
         </div>
@@ -194,7 +199,9 @@
         <span class="section-tag">About the Conference</span>
         <h2 class="section-title">16th to 18th<br>NOV <em>2026</em></h2>
         <p>
-          IEEE URUCON 2026 Conference sponsored by IEEE Cono Sur Council and IEEE Uruguay Section, invites you to participate in the third URUCON IEEE Hybrid conference, that will be held in Montevideo, from the 16th to the 18th of November 2026.
+          IEEE URUCON 2026 Conference sponsored by IEEE Cono Sur Council and IEEE Uruguay Section, invites you to
+          participate in the third URUCON IEEE Hybrid conference, that will be held in Montevideo, from the 16th to the
+          18th of November 2026.
         </p>
         <!--<div class="about-stats">
           <div class="stat-item">
@@ -215,17 +222,16 @@
   </section>
 
   <!-- ── SPONSORS ── -->
-  <!--<section id="sponsors">
+  <section id="sponsors">
     <div class="sponsors-inner">
       <div class="sponsors-header reveal">
-        <span class="section-tag">Partners & Sponsors</span>
-        <h2 class="section-title" style="margin-bottom:0">Quienes <em>confían</em> en nosotros</h2>
-        <p class="sponsors-subtitle">Organizaciones que hacen posible nuestra misión.</p>
+        <h2 class="section-title" style="margin-bottom:0">Partners <em>and</em> Sponsors</h2>
+        <p class="sponsors-subtitle">Organizations that make this conference posible.</p>
       </div>
 
       <div class="sponsors-tiers">
         <div class="tier-gold reveal">
-          <div class="sponsor-tier-label">Oro</div>
+          <div class="sponsor-tier-label">Gold</div>
           <div class="sponsors-row">
             <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
             <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
@@ -234,7 +240,7 @@
         </div>
 
         <div class="tier-silver reveal">
-          <div class="sponsor-tier-label">Plata</div>
+          <div class="sponsor-tier-label">Silver</div>
           <div class="sponsors-row">
             <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
             <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
@@ -244,7 +250,7 @@
         </div>
 
         <div class="tier-bronze reveal">
-          <div class="sponsor-tier-label">Bronce</div>
+          <div class="sponsor-tier-label">Bronze</div>
           <div class="sponsors-row">
             <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
             <div class="sponsor-card"><div class="sponsor-placeholder"><div class="sp-bar"></div><div class="sp-bar"></div></div></div>
@@ -255,7 +261,7 @@
         </div>
       </div>
     </div>
-  </section>-->
+  </section>
 
   <!-- ── FOOTER ── -->
   <footer id="contacto">
@@ -286,7 +292,9 @@
           <h4>Legal</h4>
           <ul>
             <li><a href="https://www.ieee.org/about/corporate/governance/p9-26.html">Nondiscrimination Policy</a></li>
-            <li><a href="https://conferences.ieeeauthorcenter.ieee.org/author-ethics/guidelines-and-policies/submission-policies/">Publishing Policy</a></li>
+            <li><a
+                href="https://conferences.ieeeauthorcenter.ieee.org/author-ethics/guidelines-and-policies/submission-policies/">Publishing
+                Policy</a></li>
             <li><a href="https://www.ieee.org/security-privacy.html">IEEE Privacy Policy</a></li>
             <li><a href="https://www.ieee.org/accessibility-statement.html">Accessibility</a></li>
           </ul>
@@ -314,4 +322,5 @@
   <!-- Script -->
   <script src="js/main.js"></script>
 </body>
+
 </html>

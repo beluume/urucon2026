@@ -1,15 +1,13 @@
-/* ══════════════════════════════════════════
-   CONFERENCIA — main.js
-   ══════════════════════════════════════════ */
 
-// ── Nav scroll shrink ──────────────────────
+//  Nav scroll shrink 
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
 });
 
-// ── Mobile drawer ──────────────────────────
+
+// ── Mobile drawer
 const drawer    = document.getElementById('mobileDrawer');
 const hamburger = document.getElementById('hamburger');
 
@@ -30,7 +28,7 @@ drawer.addEventListener('click', (e) => {
   if (e.target === drawer) closeMobile();
 });
 
-// ── Scroll reveal ──────────────────────────
+// ── Scroll reveal 
 const reveals  = document.querySelectorAll('.reveal');
 
 const observer = new IntersectionObserver((entries) => {
